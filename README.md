@@ -15,7 +15,7 @@ A divisão das atividades foi realizada conforme as disciplinas da grade curricu
 
 
 ##
-- [DOCUMENTAÇÃO JAVA](Documentos/Documentação/DOCUMENTAÇÃO%20JAVA.pdf)
+- [DOCUMENTAÇÃO JAVA](Documentos/DOCUMENTAÇÃO%20JAVA-%20GLOBAL.pdf)
 
 ## Rodagem da Aplicação
 Para executar a API, siga os passos abaixo:
