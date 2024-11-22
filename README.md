@@ -28,7 +28,7 @@ A aplicação está conectada a um banco de dados hospedado na conta do William,
 
 ## Diagramas
 ### Diagrama Relacional
-![Diagrama Relacional](Documentos/Relacional.png)
+![Diagrama Relacional](Documentos/Relational_1.png)
 
 ### Diagrama de Lógico
 ![Diagrama Lógico](Documentos/Logical.png)
@@ -40,118 +40,61 @@ A aplicação está conectada a um banco de dados hospedado na conta do William,
 
 #### Criar Cliente
 - **Método**: POST
-- **URL**: `http://localhost:8080/cadastro`
+- **URL**: `http://localhost:9090/user`
 - **Parâmetros**: 
   - **Exemplo de Body**:
-  {
-	"name": "William",
-    "CPF": "38-34386839",
-    "CEP": "04321070",
-    "primeiroTratamento": "Sim"
-}
+{
+    "nomeUser": "Liya",
+    "qntDeCarregadores": "4",
+    "estadoCarregadores": "Muito bom",
+    "cpf": "34276575642",
+    "cep": "213475623432"
+    }
+
 - **Respostas**:
   - **200 OK**: Cliente criado com sucesso
   - **400 Bad Request**: Dados inválidos
-![Teste Postman POST](Documentos/POST_JAVA.png)
+![Teste Postman POST](Documentos/POST_GLOBAL.png)
 
 
 #### Obter Todos os Clientes
 - **Método**: GET
-- **URL**: `http://localhost:8080/cadastro`
+- **URL**: `http://localhost:9090/user`
 - **Respostas**:
   - **200 OK**: Retorna a lista de clientes
   - **404 Not Found**: Nenhum cliente encontrado
-![Teste Postman GET](Documentos/GET_JAVA.png)
+![Teste Postman GET](Documentos/GET_GLOBAL.png)
 
 #### Obter Cliente por ID
 - **Método**: GET
-- **URL**: `http://localhost:8080/cadastro/{id}`
+- **URL**: `http://localhost:9090/user/{id}`
 - **Parâmetros**: 
   - **Path Variable**: `id` do cliente
 - **Respostas**:
   - **200 OK**: Retorna os dados do cliente
   - **404 Not Found**: Cliente não encontrado
-![Teste Postman GET BY ID](Documentos/get_by_id.png)
+![Teste Postman GET BY ID](Documentos/GET_ID_GLOBAL.png)
 
 
 #### Atualizar Cliente
 - **Método**: PUT
-- **URL**: `http://localhost:8080/cadastro/{id}`
+- **URL**: `http://localhost:9090/user/{id}`
 - **Parâmetros**: 
   - **Path Variable**: `id` do cliente
   - **Body**: JSON com os dados atualizados do cliente
 - **Respostas**:
   - **200 OK**: Cliente atualizado com sucesso
   - **404 Not Found**: Cliente não encontrado
-  ![Teste Postman PUT](Documentos/UPDATE.png)
+  ![Teste Postman PUT](Documentos/GET_ID_GLOBAL.png)
 
 #### Deletar Cliente
 - **Método**: DELETE
-- **URL**: `http://localhost:8080/cadastro/{id}`
+- **URL**: `http://localhost:9090/user/{id}`
 - **Parâmetros**: 
   - **Path Variable**: `id` do cliente
 - **Respostas**:
   - **200 OK**: Cliente deletado com sucesso
   - **404 Not Found**: Cliente não encontrado
-![Teste Postman DELETE](Documentos/delete.png)
+![Teste Postman DELETE](Documentos/DELETE_GLOBAL.png)
 
 
-***
-
-
-#### Criar Endereco
-- **Método**: POST
-- **URL**: `http://localhost:8080/endereco`
-- **Parâmetros**: 
-  - **Exemplo de Body**:
-{
-    "numero": 1231,
-    "ponto_referencia": "Perto da mercado ",
-    "bairro": "PAulista",
-    "rua" : "Avenida Paulista"
-}
-- **Respostas**:
-  - **200 OK**: Endereco criado com sucesso
-  - **400 Bad Request**: Dados inválidos
-![Teste Postman POST](Documentos/POST_ENDERECO.png)
-
-#### Obter Todos os Enderecos
-- **Método**: GET
-- **URL**: `http://localhost:8080/endereco`
-- **Respostas**:
-  - **200 OK**: Retorna a lista de Enderecos
-  - **404 Not Found**: Nenhum Endereco encontrado
-![Teste Postman GET](Documentos/GET_ENDERECO.png)
-
-#### Obter Endereco por ID
-- **Método**: GET
-- **URL**: `http://localhost:8080/endereco/{id}`
-- **Parâmetros**: 
-  - **Path Variable**: `id` do endereco
-- **Respostas**:
-  - **200 OK**: Retorna os dados do Endereco
-  - **404 Not Found**: Endereco não encontrado
-![Teste Postman GET BY ID](Documentos/GET_BY_ID_ENDERECO.png)
-
-
-
-#### Atualizar Endereco
-- **Método**: PUT
-- **URL**: `http://localhost:8080/endereco/{id}`
-- **Parâmetros**: 
-  - **Path Variable**: `id` do Endereco
-  - **Body**: JSON com os dados atualizados do Endereco
-- **Respostas**:
-  - **200 OK**: Endereco atualizado com sucesso
-  - **404 Not Found**: Endereco não encontrado
-  ![Teste Postman PUT](Documentos/PUT_ENDERECO.png)
-
-#### Deletar Endereco
-- **Método**: DELETE
-- **URL**: `http://localhost:8080/endereco/{id}`
-- **Parâmetros**: 
-  - **Path Variable**: `id` do Endereco
-- **Respostas**:
-  - **200 OK**: Endereco deletado com sucesso
-  - **404 Not Found**: Endereco não encontrado
-![Teste Postman DELETE](Documentos/DELETE_ENDERECO.png)
