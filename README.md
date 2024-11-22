@@ -36,6 +36,9 @@ A aplicação está conectada a um banco de dados hospedado na conta do William,
 ## Link do Vídeo de Apresentação
 - [Link do Vídeo](https://youtu.be/Y9_4OHeAdfs)
 
+## Link do Pitch
+- [Link do Vídeo](https://youtu.be/3ixbqTMq80U)
+
 ## Listagem de Endpoints
 
 #### Criar Cliente
